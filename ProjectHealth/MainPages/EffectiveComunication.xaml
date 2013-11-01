@@ -1,0 +1,376 @@
+﻿<Page x:Class="ProjectHealth.EffectiveComunication"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="540" d:DesignWidth="800"
+	Title="Effective Comunication">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush Opacity="0.3">
+                <GradientStop Color="Yellow"  Offset="0.3"/>
+                <GradientStop Color="Green"  Offset="0.6"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.6*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1.8*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <!-- Region (Title One) -->
+        <TextBox Grid.Column="2" Grid.Row="1"
+                    Name="titleOne"
+                    SpellCheck.IsEnabled="True" 
+                    AcceptsReturn="True" 
+                    AutoWordSelection="True" 
+                    BorderBrush="Transparent"
+                    Foreground="SteelBlue"
+                    IsReadOnly="True"
+                    FontSize="25"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalAlignment="Center"
+                    Text="Effective Comunication"
+                    ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                    ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <TextBox.Background>
+                <LinearGradientBrush Opacity="0.09">
+                    <GradientStop Color="Blue"  Offset="2"/>
+                    <GradientStop Color="Yellow"  Offset="2"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <!-- EndRegion -->
+
+        <Canvas Grid.Column="1" Grid.Row="2" Grid.RowSpan="4" Grid.ColumnSpan="3">
+            <!-- Region (Main buttons) -->
+            <Grid Canvas.Left="322" Canvas.Top="102" Height="77" Width="133">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" Margin="0,0,10,0" Grid.RowSpan="2" FontWeight="Bold" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    Comunication<LineBreak/>Interaction
+                </TextBlock>
+                <Button Click="OpenComunicationInfo" Style="{StaticResource RoundButton1}" Canvas.Left="42" Canvas.Top="1">
+                </Button>
+            </Grid>
+
+            <Grid Canvas.Top="102" Height="77" Width="133" Canvas.Left="104">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" Margin="0,0,10,0" Grid.RowSpan="2" FontWeight="Bold" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    Desire
+                </TextBlock>
+                <Button Click="OpenDesireInfo" Style="{StaticResource RoundButton1}" Canvas.Left="42" Canvas.Top="1">
+                </Button>
+            </Grid>
+
+
+            <Grid Height="55" Canvas.Left="39" Canvas.Top="209" Width="110">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,10,4,10" >
+                    Cycle of the<LineBreak/>communication
+                </TextBlock>
+                <Button Click="OpenCycle" Style="{StaticResource CloudButton1}" Canvas.Left="42" Canvas.Top="1">
+                </Button>
+            </Grid>
+            <Grid Height="55" Canvas.Left="469" Canvas.Top="23" Width="110">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    Techniques
+                </TextBlock>
+                <Button Click="OpenTechniques" Style="{StaticResource CloudButton1}" Canvas.Left="42" Canvas.Top="1">
+                </Button>
+            </Grid>
+            <Grid Height="55" Canvas.Left="260" Canvas.Top="229" Width="110">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    Stages
+                </TextBlock>
+                <Button Click="OpenStages" Style="{StaticResource CloudButton1}" Canvas.Left="42" Canvas.Top="1">
+                </Button>
+            </Grid>
+            <Grid Height="55" Canvas.Left="469" Canvas.Top="209" Width="110">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    Models
+                </TextBlock>
+                <Button Click="OpenModels" Style="{StaticResource CloudButton1}" Canvas.Left="42" Canvas.Top="1">
+                </Button>
+            </Grid>
+
+            <Grid Height="55" Canvas.Left="114" Canvas.Top="10" Width="110">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    Approach
+                </TextBlock>
+                <Button Click="OpenApproach" Style="{StaticResource CloudButton1}" Canvas.Left="42" Canvas.Top="1">
+                </Button>
+            </Grid>
+
+            <Grid Canvas.Left="604" Canvas.Top="269" Height="77" Width="79">
+                <Button Style="{StaticResource ComunicationButton1}" Canvas.Left="42" Canvas.Top="1" >
+                    <Button.RenderTransform>
+                        <ScaleTransform ScaleX="0.15" ScaleY="0.15"></ScaleTransform>
+                    </Button.RenderTransform>
+                </Button>
+            </Grid>
+            <!-- EndRegion -->
+
+            <!-- Region (Secondary buttons) -->
+            <!-- Region (First part) -->
+            <Button
+                Click="OpenEffectiveSolutions"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="15"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Effective solutions" Canvas.Left="460" Canvas.Top="-8">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Click="OpenClearDesire"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="15"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Clear desire" Canvas.Left="355" Canvas.Top="52">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Click="OpenDisclaimer"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="15"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Disclaimer" Canvas.Left="364" Canvas.Top="10">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+
+            <Button
+                Click="OpenLimits"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="15"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Limits" Canvas.Left="625" Canvas.Top="52">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Click="OpenPositiveAttitude"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="15"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Positive attitude" Canvas.Left="473" Canvas.Top="92">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <!-- EndRegion -->
+
+            <!-- Region (Second part) -->
+            <Button
+                Click="OpenHumility"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="15"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Humility" Canvas.Left="494" Canvas.Top="286">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Click="OpenAdaptation"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="15"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Adaptation" Canvas.Left="589" Canvas.Top="209">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Click="OpenAggresion"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="15"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Aggression" Canvas.Left="589" Canvas.Top="167">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Click="OpenSeduction"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="15"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Seduction" Canvas.Left="484" Canvas.Top="153">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <!-- EndRegion -->
+
+            <!-- Region (Third part) -->
+            <Button
+                Click="OpenClosing"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="15"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Closing" Canvas.Left="382" Canvas.Top="308">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Click="OpenDifferentiation"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="15"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Differentiation" Canvas.Left="260" Canvas.Top="308">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Click="OpenConnection"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="15"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Connection" Canvas.Left="162" Canvas.Top="308">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Click="OpenQualityOfFunctioning"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="15"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Quality of functioning" Canvas.Left="-29" Canvas.Top="286">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <!-- EndRegion -->
+
+            <!-- Region (Fourth part) -->
+            <Button
+                Click="OpenHealthySelfishness"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="15"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Healthy selfishness" Canvas.Left="-40" Canvas.Top="65">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Click="OpenEgocentrism"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="15"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Egocentrism" Canvas.Left="-40" Canvas.Top="25">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <!-- EndRegion -->
+
+            <!-- EndRegion -->
+        </Canvas>
+    </Grid>
+</Page>

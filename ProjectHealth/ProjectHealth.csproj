@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2FF38661-8DDA-4654-8A6B-DD0B78749149}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectHealth</RootNamespace>
+    <AssemblyName>ProjectHealth</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ProjectHealth.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>..\packages\Common.Logging.2.1.2\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="PowerCollections">
+      <HintPath>..\packages\XAct.Wintellect.PowerCollections.0.0.1\lib\net20\PowerCollections.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz">
+      <HintPath>..\packages\Quartz.2.2\lib\net40\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Bubbles\WorkAndLive\ControlInWork\Delegation.cs" />
+    <Compile Include="Bubbles\WorkAndLive\ControlInWork\SayingNo.cs" />
+    <Compile Include="Bubbles\WorkAndLive\ControlInWork\TimePlan.cs" />
+    <Compile Include="Bubbles\WorkAndLive\ControlInWork\TodoLists.cs" />
+    <Compile Include="Bubbles\WorkAndLive\StressMeasures\Dissolution.cs" />
+    <Compile Include="Bubbles\WorkAndLive\StressMeasures\Exercises.cs" />
+    <Compile Include="Bubbles\WorkAndLive\CareForOurselves\FavouritePeople.cs" />
+    <Compile Include="Bubbles\WorkAndLive\CareForOurselves\HealthCare.cs" />
+    <Compile Include="Bubbles\WorkAndLive\CareForOurselves\Journeys.cs" />
+    <Compile Include="Bubbles\WorkAndLive\CareForOurselves\Vacantions.cs" />
+    <Compile Include="Bubbles\WorkAndLive\DoMoreHappy\BodyCare.cs" />
+    <Compile Include="Bubbles\WorkAndLive\DoMoreHappy\FamilyCare.cs" />
+    <Compile Include="Bubbles\WorkAndLive\DoMoreHappy\FinanceCare.cs" />
+    <Compile Include="Bubbles\WorkAndLive\DoMoreHappy\HelthyNutrition.cs" />
+    <Compile Include="Bubbles\WorkAndLive\DoMoreHappy\MindDevelopment.cs" />
+    <Compile Include="Bubbles\WorkAndLive\DoMoreHappy\SocialNetworking.cs" />
+    <Compile Include="Bubbles\WorkAndLive\BadPracticesWork\BadEffect.cs" />
+    <Compile Include="Bubbles\WorkAndLive\BadPracticesWork\Fatigue.cs" />
+    <Compile Include="Bubbles\WorkAndLive\BadPracticesWork\Grizzling.cs" />
+    <Compile Include="Bubbles\WorkAndLive\BadPracticesWork\NigthWorking.cs" />
+    <Compile Include="Bubbles\WorkAndLive\BadPracticesWork\NoFreeTime.cs" />
+    <Compile Include="Bubbles\WorkAndLive\BadPracticesWork\NoLunchBreak.cs" />
+    <Compile Include="Bubbles\WorkAndLive\BadPracticesWork\NoRest.cs" />
+    <Compile Include="Bubbles\WorkAndLive\BadPracticesWork\TemperLoss.cs" />
+    <Compile Include="Bubbles\WorkAndLive\BadPracticesWork\BadPracticesWork.cs" />
+    <Compile Include="Bubbles\WorkAndLive\CareForOurselves\CareForOurselves.cs" />
+    <Compile Include="Bubbles\WorkAndLive\ControlInWork\ControlInWork.cs" />
+    <Compile Include="Bubbles\WorkAndLive\DoMoreHappy\DoMoreHappy.cs" />
+    <Compile Include="Bubbles\RestorativeMovement\SeatedPosition\Breathing.cs" />
+    <Compile Include="Bubbles\RestorativeMovement\SeatedPosition\Neck.cs" />
+    <Compile Include="Bubbles\RestorativeMovement\SeatedPosition\OnFloor.cs" />
+    <Compile Include="Bubbles\RestorativeMovement\SeatedPosition\OnPelvis.cs" />
+    <Compile Include="Bubbles\RestorativeMovement\HeadPosition\OverTheShoulders.cs" />
+    <Compile Include="Bubbles\RestorativeMovement\Stretching\Balance.cs" />
+    <Compile Include="Bubbles\RestorativeMovement\NaturalMovement\Climbing.cs" />
+    <Compile Include="Bubbles\RestorativeMovement\NaturalMovement\Continious.cs" />
+    <Compile Include="Bubbles\RestorativeMovement\HeadPosition\HeadPosition.cs" />
+    <Compile Include="Bubbles\HealthyFood\SuperFoods\Algae.cs" />
+    <Compile Include="Bubbles\HealthyFood\SuperFoods\Animal.cs" />
+    <Compile Include="Bubbles\HealthyFood\GoodPractives\Alternation.cs" />
+    <Compile Include="Bubbles\HealthyFood\GoodPractives\FiveTimesHealthy.cs" />
+    <Compile Include="Bubbles\HealthyFood\GoodPractives\Fluid.cs" />
+    <Compile Include="Bubbles\HealthyFood\FoodInfluence\Caffeine.cs" />
+    <Compile Include="Bubbles\HealthyFood\FoodInfluence\CarbohydratesHealthy.cs" />
+    <Compile Include="Bubbles\HealthyFood\CaloricIntake\BMIIndex.cs" />
+    <Compile Include="Bubbles\HealthyFood\CaloricIntake\CaloricIntake.cs" />
+    <Compile Include="Bubbles\EffectiveComunicationCs\Techniques\ClearDesire.cs" />
+    <Compile Include="Bubbles\EffectiveComunicationCs\Techniques\Disclaimer.cs" />
+    <Compile Include="Bubbles\EffectiveComunicationCs\Models\Adaptation.cs" />
+    <Compile Include="Bubbles\EffectiveComunicationCs\Models\Aggression.cs" />
+    <Compile Include="Bubbles\EffectiveComunicationCs\Stages\Closing.cs" />
+    <Compile Include="Bubbles\EffectiveComunicationCs\Stages\Connection.cs" />
+    <Compile Include="Bubbles\EffectiveComunicationCs\Stages\Differentiation.cs" />
+    <Compile Include="Bubbles\EffectiveComunicationCs\Approach\Approach.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\RulesCs\BalancedDiet.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\SportCs\AchievableGoals.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\BasicHealthPrinciples.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\BasicHealthPrinciplesInfo.cs" />
+    <Compile Include="Bubbles\Bubble.cs" />
+    <Compile Include="Bubbles\BubbleTreeLoader.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\NutritionCs\DifferentFood.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\NutritionCs\Nutrition.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\NutritionCs\Proteins.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\NutritionCs\RawFood.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\NutritionCs\Water.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\NutritionCs\Carbohydrates.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\NutritionCs\FiveTimes.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\NutritionCs\HoneyLemon.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\NutritionCs\TwoHBefore.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\SportCs\ExtremeSports.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\SportCs\JoggingFitness.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\SportCs\PersonalPreferences.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\SportCs\Sport.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\RestTime\RestTime.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\SameDaysWell\SameDays.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\RulesCs\Honey.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\RulesCs\LessSalt.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\RulesCs\MoreWater.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\RulesCs\RegularMeals.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\RulesCs\Rules.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\RulesCs\Sweets.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\RulesCs\VariedDiet.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\RulesCs\VariedFats.cs" />
+    <Compile Include="Bubbles\BasicHeathCs\RulesCs\WholeMeals.cs" />
+    <Compile Include="Bubbles\EffectiveComunicationCs\Cycle\Cycle.cs" />
+    <Compile Include="Bubbles\EffectiveComunicationCs\Comunication.cs" />
+    <Compile Include="Bubbles\EffectiveComunicationCs\Desire.cs" />
+    <Compile Include="Bubbles\EffectiveComunicationCs\Models\Models.cs" />
+    <Compile Include="Bubbles\EffectiveComunicationCs\Stages\Stages.cs" />
+    <Compile Include="Bubbles\EffectiveComunicationCs\Techniques\Techniques.cs" />
+    <Compile Include="Bubbles\EffectiveComunicationCs\Approach\Egocentrism.cs" />
+    <Compile Include="Bubbles\EffectiveComunicationCs\Approach\HealthySelfishness.cs" />
+    <Compile Include="Bubbles\EffectiveComunicationCs\Cycle\QualityOfFunctioning.cs" />
+    <Compile Include="Bubbles\EffectiveComunicationCs\Models\Humility.cs" />
+    <Compile Include="Bubbles\EffectiveComunicationCs\Models\Seduction.cs" />
+    <Compile Include="Bubbles\EffectiveComunicationCs\Techniques\EffectiveSolutions.cs" />
+    <Compile Include="Bubbles\EffectiveComunicationCs\Techniques\Limits.cs" />
+    <Compile Include="Bubbles\EffectiveComunicationCs\Techniques\PositiveAttitude.cs" />
+    <Compile Include="Bubbles\HealthyFood\FoodInfluence\Fats.cs" />
+    <Compile Include="Bubbles\HealthyFood\FoodInfluence\FoodInfluence.cs" />
+    <Compile Include="Bubbles\HealthyFood\GoodPractives\GoodPractices.cs" />
+    <Compile Include="Bubbles\HealthyFood\HealthyFoodInfo.cs" />
+    <Compile Include="Bubbles\HealthyFood\Pyramid\Pyramid.cs" />
+    <Compile Include="Bubbles\HealthyFood\StressHandling\StressHandling.cs" />
+    <Compile Include="Bubbles\HealthyFood\SuperFoods\SuperFoods.cs" />
+    <Compile Include="Bubbles\HealthyFood\GoodPractives\TurnHabit.cs" />
+    <Compile Include="Bubbles\HealthyFood\VitaminsAndMinerals\VitaminsAndMinerals.cs" />
+    <Compile Include="Bubbles\HealthyFood\FoodInfluence\ProteinsHealth.cs" />
+    <Compile Include="Bubbles\HealthyFood\FoodInfluence\Sugar.cs" />
+    <Compile Include="Bubbles\HealthyFood\SuperFoods\Plant.cs" />
+    <Compile Include="Bubbles\RestorativeMovement\NaturalMovement\NaturalMovement.cs" />
+    <Compile Include="Bubbles\RestorativeMovement\RestorativeMovement.cs" />
+    <Compile Include="Bubbles\RestorativeMovement\SeatedPosition\SeatedPosition.cs" />
+    <Compile Include="Bubbles\RestorativeMovement\Stretching\Stretching.cs" />
+    <Compile Include="Bubbles\RestorativeMovement\UprigthPosition\UprightPosition.cs" />
+    <Compile Include="Bubbles\RestorativeMovement\NaturalMovement\Squat.cs" />
+    <Compile Include="Bubbles\RestorativeMovement\NaturalMovement\Walking.cs" />
+    <Compile Include="Bubbles\RestorativeMovement\UprigthPosition\ShouldersAboveFeet.cs" />
+    <Compile Include="Bubbles\RestorativeMovement\Stretching\TwoTimes.cs" />
+    <Compile Include="Bubbles\RestorativeMovement\Stretching\WalkingFiveKm.cs" />
+    <Compile Include="Bubbles\RestorativeMovement\UprigthPosition\WeigthOnHeels.cs" />
+    <Compile Include="Bubbles\RestorativeMovement\UprigthPosition\WorkingUprigth.cs" />
+    <Compile Include="Bubbles\RestorativeMovement\Rule300.cs" />
+    <Compile Include="Bubbles\WorkAndLive\StressMeasures\NoOverloads.cs" />
+    <Compile Include="Bubbles\WorkAndLive\StressMeasures\Relaxation.cs" />
+    <Compile Include="Bubbles\WorkAndLive\StressMeasures\StressMeasures.cs" />
+    <Compile Include="Bubbles\WorkAndLive\WorkAndLive.cs" />
+    <Compile Include="Reminder\StaticRemind.cs" />
+    <Compile Include="WPFGrowNotifications\GrowlNotifiactions.xaml.cs">
+      <DependentUpon>GrowlNotifiactions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPFGrowNotifications\Notifications.cs" />
+    <Compile Include="WPFMessageBox\IconHelper.cs" />
+    <Compile Include="MinimizeToTray\MinimizeToTray.cs" />
+    <Compile Include="Reminder\Remind.cs" />
+    <Compile Include="Scheduler\StringNode.cs" />
+    <Compile Include="ScheduleDataSaver\MyData.cs" />
+    <Compile Include="Scheduler\EventSchedule.cs" />
+    <Compile Include="SecondaryPages\SearchDetailResult.xaml.cs">
+      <DependentUpon>SearchDetailResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SecondaryPages\SearchBubblePage.xaml.cs">
+      <DependentUpon>SearchBubblePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SecondaryPages\DateCreatePage.xaml.cs">
+      <DependentUpon>DateCreatePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SecondaryPages\DatesSchedulePage.xaml.cs">
+      <DependentUpon>DatesSchedulePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduler\EventNode.cs" />
+    <Compile Include="SecondaryPages\DisplayPage.xaml.cs">
+      <DependentUpon>DisplayPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPages\EffectiveComunication.xaml.cs">
+      <DependentUpon>EffectiveComunication.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPages\HealthyFood.xaml.cs">
+      <DependentUpon>HealthyFood.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPages\BasicRulez.xaml.cs">
+      <DependentUpon>BasicRulez.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPages\Welcome.xaml.cs">
+      <DependentUpon>Welcome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPages\RestorativeMovement.xaml.cs">
+      <DependentUpon>RestorativeMovement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPages\WorkAndLive.xaml.cs">
+      <DependentUpon>WorkAndLive.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SecondaryPages\ReadingPage.xaml.cs">
+      <DependentUpon>ReadingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPFMessageBox\WPFMessageBox.xaml.cs">
+      <DependentUpon>WPFMessageBox.xaml</DependentUpon>
+    </Compile>
+    <Page Include="SecondaryPages\SearchDetailResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SecondaryPages\SearchBubblePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SecondaryPages\DateCreatePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SecondaryPages\DatesSchedulePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SecondaryPages\DisplayPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPages\EffectiveComunication.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPages\HealthyFood.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPages\BasicRulez.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MainPages\Welcome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPages\RestorativeMovement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPages\WorkAndLive.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SecondaryPages\ReadingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPFGrowNotifications\DesignTimeNotificationData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPFGrowNotifications\GrowlNotifiactions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPFMessageBox\WPFMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="job_scheduling_data_2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthPrinciplesPic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WaterPic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthPic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\NutritionPic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RestPic.jpg" />
+    <Resource Include="Images\SameDaysPic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SportPic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RulesPic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AggresionPic.jpg" />
+    <Resource Include="Images\RestingPic.jpg" />
+    <Resource Include="Images\RestorativeMovementPic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ComunicationPic.jpg" />
+    <Resource Include="Images\DesirePic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WorkAndLivePic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ProjectHealth.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CarbohydratesPic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPFGrowNotifications\Resources\notification-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPFGrowNotifications\Resources\close.png" />
+    <Resource Include="WPFGrowNotifications\Resources\facebook-button.png" />
+    <Resource Include="WPFGrowNotifications\Resources\microsoft-windows-8-logo.png" />
+    <Resource Include="WPFGrowNotifications\Resources\Radiation_warning_symbol.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

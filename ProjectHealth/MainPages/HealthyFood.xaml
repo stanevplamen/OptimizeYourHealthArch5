@@ -1,0 +1,398 @@
+﻿<Page x:Class="ProjectHealth.HealthyFood"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="540" d:DesignWidth="800"
+	Title="Healthy Food">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush Opacity="0.3">
+                <GradientStop Color="Blue"  Offset="0.3"/>
+                <GradientStop Color="GreenYellow" Offset="0.6"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.6*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1.8*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <!-- Region (Title One) -->
+        <TextBox Grid.Column="2" Grid.Row="1"
+                    Name="titleOne"
+                    SpellCheck.IsEnabled="True" 
+                    AcceptsReturn="True" 
+                    AutoWordSelection="True" 
+                    BorderBrush="Transparent"
+                    Foreground="SteelBlue"
+                    IsReadOnly="True"
+                    FontSize="25"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalAlignment="Center"
+                    Text="Healthy Food"
+                    ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                    ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <TextBox.Background>
+                <LinearGradientBrush Opacity="0.09">
+                    <GradientStop Color="Green"  Offset="2"/>
+                    <GradientStop Color="Blue"  Offset="2"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <!-- EndRegion -->
+
+        <Canvas Grid.Column="1" Grid.Row="2" Grid.RowSpan="4" Grid.ColumnSpan="3">
+            <!-- Region (Main buttons) -->
+            <Grid Canvas.Left="246" Canvas.Top="102" Height="77" Width="133">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" Margin="0,0,10,0" Grid.RowSpan="2" FontWeight="Bold" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    Healthy<LineBreak/>Food
+                </TextBlock>
+                <Button Click="OpenHealthyFoodInfo" Style="{StaticResource RoundButton1}" Canvas.Left="42" Canvas.Top="1">
+                </Button>         
+            </Grid>
+
+            <Grid Height="55" Canvas.Left="93" Canvas.Top="82" Width="110">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    SuperFoods
+                </TextBlock>
+                <Button Click="OpenSuperFoods" Style="{StaticResource CloudButton1}" Canvas.Left="42" Canvas.Top="1">
+                </Button>
+            </Grid>
+            <Grid Height="55" Canvas.Left="93" Canvas.Top="200" Width="110">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    Caloric<LineBreak/>Intake
+                </TextBlock>
+                <Button Click="OpenCaloricIntake" Style="{StaticResource CloudButton1}" Canvas.Left="42" Canvas.Top="1">
+                </Button>
+            </Grid>
+            <Grid Height="55" Canvas.Left="431" Canvas.Top="82" Width="110">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    Pyramid
+                </TextBlock>
+                <Button Click="OpenPyramid" Style="{StaticResource CloudButton1}" Canvas.Left="42" Canvas.Top="1">
+                </Button>
+            </Grid>
+            <Grid Height="55" Canvas.Left="269" Canvas.Top="231" Width="110">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    Food<LineBreak/>Influence
+                </TextBlock>
+                <Button Click="OpenFoodInfluence" Style="{StaticResource CloudButton1}" Canvas.Left="42" Canvas.Top="1">
+                </Button>
+            </Grid>
+            <Grid Height="55" Canvas.Left="431" Canvas.Top="200" Width="110">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    Good<LineBreak/>Practices
+                </TextBlock>
+                <Button Click="OpenGoodPractices" Style="{StaticResource CloudButton1}" Canvas.Left="42" Canvas.Top="1">
+                </Button>
+            </Grid>
+
+            <Grid Height="55" Canvas.Left="207" Canvas.Top="10" Width="110">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    Vitamins<LineBreak/>and minerals
+                </TextBlock>
+                <Button Click="OpenVitaminsAndMinerals" Style="{StaticResource CloudButton1}" Canvas.Left="42" Canvas.Top="1">
+                </Button>
+            </Grid>
+
+            <Grid Height="55" Canvas.Left="348" Canvas.Top="10" Width="110">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    Stress<LineBreak/>Handling
+                </TextBlock>
+                <Button Click="OpenStressHandling" Style="{StaticResource CloudButton1}" Canvas.Left="42" Canvas.Top="1">
+                </Button>
+            </Grid>
+
+            <Grid Canvas.Left="603" Canvas.Top="276" Height="77" Width="79">
+                <Button Style="{StaticResource FoodButton2}" Canvas.Left="42" Canvas.Top="1" >
+                    <Button.RenderTransform>
+                        <ScaleTransform ScaleX="0.16" ScaleY="0.16"></ScaleTransform>
+                    </Button.RenderTransform>
+                </Button>
+            </Grid>
+            <!-- EndRegion -->
+
+            <!-- Region (Secondary buttons) -->
+            <!-- Region (First part) -->
+            <Button
+                Click="OpenCaffeine"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="14"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Caffeine /excited/" Canvas.Left="65" Canvas.Top="298">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Click="OpenCarbohydratesHealthy"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="14"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Carbohydrates /calm/" Canvas.Left="207" Canvas.Top="328">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Click="OpenProteinsHealth"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="14"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Proteins /build/" Canvas.Left="369" Canvas.Top="328">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Click="OpenSugar"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="14"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Sugar /mood/" Canvas.Left="369" Canvas.Top="298">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Click="OpenFats"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="14"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Fats /lazy/" Canvas.Left="207" Canvas.Top="298">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <!-- EndRegion -->
+
+            <!-- Region (Second part) -->
+            <Button
+                Click="OpenBMIIndex"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="14"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="BMI Index" Canvas.Left="-10" Canvas.Top="230">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Click="OpenPlant"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="14"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Plant" Canvas.Left="55" Canvas.Top="154">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Click="OpenAlgae"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="14"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Algae" Canvas.Left="18" Canvas.Top="98">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Click="OpenAnimal"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="14"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Animal" Canvas.Left="55" Canvas.Top="40">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <!-- EndRegion -->
+
+            <!-- Region (Third part) -->
+            <Button
+                Click="OpenTurnHabit"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="14"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Turn to habit" Canvas.Left="577" Canvas.Top="188">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Click="OpenFluid"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="14"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Fluid intake" Canvas.Left="577" Canvas.Top="237">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Click="OpenAlternation"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="14"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Alternation" Canvas.Left="493" Canvas.Top="273">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Click="OpenFiveTimesHealthy"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="14"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="Eating 5 times a day" Canvas.Left="415" Canvas.Top="154">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <!-- EndRegion -->
+
+            <!-- Region (Fourth part) -->
+            <Button
+                Click="OpenPyramid"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="14"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="60% Carbohydrates" Canvas.Left="493">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Click="OpenPyramid"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="14"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="30% Fats" Canvas.Left="539" Canvas.Top="40">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button
+                Click="OpenPyramid"
+                    BorderBrush="Transparent"
+                    Foreground="DarkSlateGray"
+                    FontSize="14"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Bottom"
+                    Content="10% Proteins" Canvas.Left="577" Canvas.Top="82">
+                <Button.Background>
+                    <LinearGradientBrush Opacity="0.01">
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <!-- EndRegion -->
+
+            <!-- EndRegion -->
+        </Canvas>
+    </Grid>
+</Page>

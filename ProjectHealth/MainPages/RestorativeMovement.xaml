@@ -1,0 +1,316 @@
+﻿<Page x:Class="ProjectHealth.RestorativeMovement"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="540" d:DesignWidth="800"
+	Title="Restorative Movement">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush Opacity="0.3">
+                <GradientStop Color="Pink"  Offset="0.3"/>
+                <GradientStop Color="Blue" Offset="0.6"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.6*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1.8*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <!-- Region (Title One) -->
+        <TextBox Grid.Column="2" Grid.Row="1"
+                    Name="titleOne"
+                    SpellCheck.IsEnabled="True" 
+                    AcceptsReturn="True" 
+                    AutoWordSelection="True" 
+                    BorderBrush="Transparent"
+                    Foreground="SteelBlue"
+                    IsReadOnly="True"
+                    FontSize="25"
+                    FontStyle="Oblique"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalAlignment="Center"
+                    Text="Restorative Movement"
+                    ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                    ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <TextBox.Background>
+                <LinearGradientBrush Opacity="0.11">
+                    <GradientStop Color="Red"  Offset="2"/>
+                    <GradientStop Color="DarkMagenta"  Offset="2"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <!-- EndRegion -->
+
+        <Canvas Grid.Column="1" Grid.Row="2" Grid.RowSpan="4" Grid.ColumnSpan="3">
+            <!-- Region (Main buttons) -->
+            <Grid Canvas.Left="246" Canvas.Top="113" Height="77" Width="133">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" Margin="0,0,10,0" Grid.RowSpan="2" FontWeight="Bold" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    Restorative<LineBreak/>Movement
+                </TextBlock>
+                <Button Click="OpenRestorativeMovementInfo" Style="{StaticResource RoundButton1}" Canvas.Left="42" Canvas.Top="1">
+                </Button>
+            </Grid>
+
+            <Grid Height="55" Canvas.Left="95" Canvas.Top="64" Width="110">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    Natural<LineBreak/>Movement
+                </TextBlock>
+                <Button Click="OpenNaturalMovement" Style="{StaticResource CloudButton1}" Canvas.Left="42" Canvas.Top="1">
+                </Button>
+            </Grid>
+            <Grid Height="55" Canvas.Left="74" Canvas.Top="213" Width="110">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    Stretching
+                </TextBlock>
+                <Button Click="OpenStretching" Style="{StaticResource CloudButton1}" Canvas.Left="42" Canvas.Top="1">
+                </Button>
+            </Grid>
+            <Grid Height="55" Canvas.Left="431" Canvas.Top="51" Width="110">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    Seated<LineBreak/>Position
+                </TextBlock>
+                <Button Click="OpenSeatedPosition" Style="{StaticResource CloudButton1}" Canvas.Left="42" Canvas.Top="1">
+                </Button>
+            </Grid>
+            <Grid Height="55" Canvas.Left="258" Canvas.Top="227" Width="110">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    Upright<LineBreak/>Position
+                </TextBlock>
+                <Button Click="OpenUprigthPosition" Style="{StaticResource CloudButton1}" Canvas.Left="42" Canvas.Top="1">
+                </Button>
+            </Grid>
+            <Grid Height="55" Canvas.Left="431" Canvas.Top="200" Width="110">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    Head<LineBreak/>Position
+                </TextBlock>
+                <Button Click="OpenHeadPosition" Style="{StaticResource CloudButton1}" Canvas.Left="42" Canvas.Top="1">
+                </Button>
+            </Grid>
+
+            <Grid Canvas.Left="603" Canvas.Top="270" Height="77" Width="79">
+                <Button Style="{StaticResource MovementButton1}" Canvas.Left="42" Canvas.Top="1" >
+                    <Button.RenderTransform>
+                        <ScaleTransform ScaleX="0.3" ScaleY="0.3"></ScaleTransform>
+                    </Button.RenderTransform>
+                </Button>
+            </Grid>
+            <!-- EndRegion -->
+
+            <!-- Region (Secondary buttons) -->
+            <!-- Region (First part) -->
+            <Grid Width="90" Height="27" Canvas.Left="-17" Canvas.Top="27">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    Continuous
+                </TextBlock>
+                <Button Click="OpenContinious" Style="{StaticResource RoundButton5}">
+                    <Button.RenderTransform>
+                        <ScaleTransform ScaleX="1" ScaleY="1"></ScaleTransform>
+                    </Button.RenderTransform>
+                </Button>
+            </Grid>
+
+            <Grid Width="90" Height="27" Canvas.Left="-42" Canvas.Top="69">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    Walking
+                </TextBlock>
+                <Button Click="OpenWalking" Style="{StaticResource RoundButton5}">
+                    <Button.RenderTransform>
+                        <ScaleTransform ScaleX="1" ScaleY="1"></ScaleTransform>
+                    </Button.RenderTransform>
+                </Button>
+            </Grid>
+
+            <Grid Width="90" Height="27" Canvas.Left="104" Canvas.Top="10">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    Climbing
+                </TextBlock>
+                <Button Click="OpenClimbing" Style="{StaticResource RoundButton5}">
+                    <Button.RenderTransform>
+                        <ScaleTransform ScaleX="1" ScaleY="1"></ScaleTransform>
+                    </Button.RenderTransform>
+                </Button>
+ 
+            </Grid>
+
+            <Grid Width="90" Height="27" Canvas.Top="113" Canvas.Left="-17">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    Squat
+                </TextBlock>
+                <Button Click="OpenSquat" Style="{StaticResource RoundButton5}">
+                    <Button.RenderTransform>
+                        <ScaleTransform ScaleX="1" ScaleY="1"></ScaleTransform>
+                    </Button.RenderTransform>
+                </Button>
+            </Grid>
+
+            <!-- EndRegion -->
+
+            <!-- Region (Second part) -->
+            <Grid Width="90" Height="40" Canvas.Left="508" Canvas.Top="270">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    Over the<LineBreak/>shoulders
+                </TextBlock>
+                <Button Click="OpenOverTheShoulders" Style="{StaticResource RoundButton6}">
+                    <Button.RenderTransform>
+                        <ScaleTransform ScaleX="1" ScaleY="1.2"></ScaleTransform>
+                    </Button.RenderTransform>
+                </Button>
+ 
+            </Grid>
+
+            <Grid Width="90" Height="40" Canvas.Left="152" Canvas.Top="304">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    Shoulders<LineBreak/>above feet
+                </TextBlock>
+                <Button Click="OpenShouldersAboveFeet" Style="{StaticResource RoundButton6}">
+                    <Button.RenderTransform>
+                        <ScaleTransform ScaleX="1.1" ScaleY="1.2"></ScaleTransform>
+                    </Button.RenderTransform>
+                </Button>
+            </Grid>
+
+            <Grid Width="90" Height="40" Canvas.Left="269" Canvas.Top="304">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    Weigth<LineBreak/>on heels
+                </TextBlock>
+                <Button Click="OpenWeigthOnHeels" Style="{StaticResource RoundButton6}">
+                    <Button.RenderTransform>
+                        <ScaleTransform ScaleX="1" ScaleY="1.2"></ScaleTransform>
+                    </Button.RenderTransform>
+                </Button>
+
+            </Grid>
+
+            <Grid Width="90" Height="40" Canvas.Left="379" Canvas.Top="304">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center">
+                   Working<LineBreak/>uprigth
+                </TextBlock>
+                <Button Click="OpenWorkingUprigth" Style="{StaticResource RoundButton6}">
+                    <Button.RenderTransform>
+                        <ScaleTransform ScaleX="1" ScaleY="1.2"></ScaleTransform>
+                    </Button.RenderTransform>
+                </Button>
+            </Grid>
+            <!-- EndRegion -->
+
+            <!-- Region (Third part) -->
+            <Grid Width="90" Height="40" Canvas.Left="43" Canvas.Top="304">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center">
+                   At least two<LineBreak/>times a day
+                </TextBlock>
+                <Button Click="OpenTwoTimes" Style="{StaticResource RoundButton3}">
+                    <Button.RenderTransform>
+                        <ScaleTransform ScaleX="1.1" ScaleY="1.2"></ScaleTransform>
+                    </Button.RenderTransform>
+                </Button>
+            </Grid>
+
+            <Grid Width="90" Height="40" Canvas.Left="-42" Canvas.Top="259">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center">
+                   Walking five<LineBreak/>km daily
+                </TextBlock>
+                <Button Click="OpenWalkingFiveKm" Style="{StaticResource RoundButton3}">
+                    <Button.RenderTransform>
+                        <ScaleTransform ScaleX="1.1" ScaleY="1.2"></ScaleTransform>
+                    </Button.RenderTransform>
+                </Button>
+            </Grid>
+
+            <Grid Width="90" Height="40" Canvas.Left="-42" Canvas.Top="219">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center">
+                   Balance
+                </TextBlock>
+                <Button Click="OpenBalance" Style="{StaticResource RoundButton3}">
+                    <Button.RenderTransform>
+                        <ScaleTransform ScaleX="1" ScaleY="1"></ScaleTransform>
+                    </Button.RenderTransform>
+                </Button>
+            </Grid>
+
+            <Grid Width="90" Height="40" Canvas.Left="-17" Canvas.Top="174">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center">
+                   Sport
+                </TextBlock>
+                <Button Click="OpenSport" Style="{StaticResource RoundButton3}">
+                    <Button.RenderTransform>
+                        <ScaleTransform ScaleX="1" ScaleY="1"></ScaleTransform>
+                    </Button.RenderTransform>
+                </Button>
+            </Grid>
+
+            <Grid Width="90" Height="40" Canvas.Left="263" Canvas.Top="38">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center">
+                   3000 rigth<LineBreak/>300 wrong
+                </TextBlock>
+                <Button Click="OpenRule300" Style="{StaticResource RoundButton3}">
+                    <Button.RenderTransform>
+                        <ScaleTransform ScaleX="1.06" ScaleY="1.2"></ScaleTransform>
+                    </Button.RenderTransform>
+                </Button>
+            </Grid>
+            <!-- EndRegion -->
+
+            <!-- Region (Fourth part) -->
+            <Grid Width="90" Height="40" Canvas.Left="441" Canvas.Top="127">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center">
+                   Breathing
+                </TextBlock>
+                <Button Click="OpenBreathing" Style="{StaticResource RoundButton4}">
+                    <Button.RenderTransform>
+                        <ScaleTransform ScaleX="1" ScaleY="1"></ScaleTransform>
+                    </Button.RenderTransform>
+                </Button>
+            </Grid>
+
+            <Grid Width="90" Height="40" Canvas.Left="547" Canvas.Top="109">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center">
+                   Neck
+                </TextBlock>
+                <Button Click="OpenNeck" Style="{StaticResource RoundButton4}">
+                    <Button.RenderTransform>
+                        <ScaleTransform ScaleX="1" ScaleY="1"></ScaleTransform>
+                    </Button.RenderTransform>
+                </Button>
+            </Grid>
+
+            <Grid Width="90" Height="40" Canvas.Left="547" Canvas.Top="4">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center">
+                   On pelvis
+                </TextBlock>
+                <Button Click="OpenOnPelvis" Style="{StaticResource RoundButton4}">
+                    <Button.RenderTransform>
+                        <ScaleTransform ScaleX="1" ScaleY="1"></ScaleTransform>
+                    </Button.RenderTransform>
+                </Button>
+            </Grid>
+
+            <Grid Width="90" Height="40" Canvas.Left="441" Canvas.Top="-3">
+                <TextBlock Foreground="DarkSlateGray" FontStyle="Oblique" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center">
+                   On floor
+                </TextBlock>
+                <Button Click="OpenOnFloor" Style="{StaticResource RoundButton4}">
+                    <Button.RenderTransform>
+                        <ScaleTransform ScaleX="1" ScaleY="1"></ScaleTransform>
+                    </Button.RenderTransform>
+                </Button>
+            </Grid>
+            <!-- EndRegion -->
+
+            <!-- EndRegion -->
+        </Canvas>
+    </Grid>
+</Page>
